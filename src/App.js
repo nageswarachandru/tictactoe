@@ -1,11 +1,10 @@
 import React from "react";
+import Board from './components/Board'
 
-const app = () => {
-  return (
-    <>
-    <h1>Welcome to React Parcel Micro App!</h1>
-    <p>avengers assemble. LETS KILL THE THANOS THIS TIME PROPERLY.</p> 
-  </>
+const app = () => (
+    <div>
+    <h1> TIC TAC TOE </h1>
+    <Board />
+  </div>
   );
-};
 export default app;
