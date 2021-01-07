@@ -3,10 +3,16 @@ import React from 'react';
 import Square from './Square';
 
 // eslint-disable-next-line arrow-body-style
-const Board = ({board,handleSquareClick}) => {
+const Board = ({board, handleSquareClick, winningSquares}) => {
   // eslint-disable-next-line arrow-body-style
   const renderSquare = position => {
-    return ( <Square value={board[position]}  onClick = {() => handleSquareClick(position)} 
+    const isWinningSquare = winningSquares.includes(position);
+    return ( 
+    <Square 
+      value={board[position]}  
+      onClick = {() => handleSquareClick(position)} 
+      isWinningSquare = {isWinningSquare}
+  
     /> 
     );
   };
