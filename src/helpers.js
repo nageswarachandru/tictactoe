@@ -20,6 +20,6 @@ export function calculateWinner(squares) {
   }
   return {
     winner : null,
-        winningSquares : [],
+    winningSquares : [],
   };
 }

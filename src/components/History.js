@@ -4,13 +4,13 @@ import React from 'react'
 // eslint-disable-next-line arrow-body-style
 const History = ({history,moveTo,currentMove}) => {
   return (
-    <ul>
+    <div className = "histroy-wrapper">
+    <ul className = "history">
       {history.map ((_, move) => {
         return (
           <li key = {move}>
-            <button style={{
-              fontWeight:  move === (currentMove) ? 'Bold' : 'Normal',
-            }}
+            <button 
+            className={`btn-move ${move === currentMove ? 'active' : ''}`}
             type = "button" onClick = {() => {
               moveTo(move);
             }}>
@@ -21,6 +21,7 @@ const History = ({history,moveTo,currentMove}) => {
       })}
       
     </ul>
+    </div>
   )
 }
 

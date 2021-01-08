@@ -4,9 +4,9 @@ import React from 'react';
 const Square = ({value, onClick,isWinningSquare})=> {
 
 
-  return( <button type = "button" className = "square" 
+  return( <button type = "button"  
   onClick = {onClick}
-  style = {{fontweight : isWinningSquare ? 'Bold' : 'Normal'}}>
+  className = {`square ${isWinningSquare ? 'winning' : ''}${ value === 'X' ? 'text-green' : 'text-orange'}`}>
   {value}
   </button> 
   );
